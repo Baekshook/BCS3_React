@@ -71,6 +71,9 @@ function App() {
             <div className="mt-2 mx-2">프로젝트 간략한 설명</div>
           </li>
         </ul>
+        <div className="bg-gray-100 max-w-screen-xl mx-auto h-96 flex justify-center items-center">
+          내 연락처
+        </div>
       </main>
     </div>
   );
