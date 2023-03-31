@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export default function Calculator() {
-  const [result, setResult] = useState(0);
-  const [num1, setNum1] = useState();
-  const [num2, setNum2] = useState();
+  const [숫자, 숫자변경] = useState(0);
+  const [인풋숫자1, 인풋숫자변경1] = useState();
+  const [인풋숫자2, 인풋숫자변경2] = useState();
 
   const check = (n1, n2) => {
     if (n1 === "" || n2 === "") {
@@ -18,49 +18,49 @@ export default function Calculator() {
   };
 
   const onChangeNum1 = (e) => {
-    setNum1(e.target.value);
+    인풋숫자변경1(e.target.value);
   };
 
   const onChangeNum2 = (e) => {
-    setNum2(e.target.value);
+    인풋숫자변경2(e.target.value);
   };
 
   const onClickAdd = () => {
-    check(num1, num2);
-    setResult(parseInt(num1) + parseInt(num2));
+    check(인풋숫자1, 인풋숫자2);
+    숫자변경(parseInt(인풋숫자1) + parseInt(인풋숫자2));
     // setResult(Number(num1) + parseInt(num2));
   }; // Number와 parseInt의 차이 -> parseInt:문자열로 된 부분에서 숫자(정수)만 뽑아서 변환, Number:문자열 전체가 숫자일때 소수점까지 숫자타입으로 가져옴
 
   const onClickMinus = () => {
-    check(num1, num2);
-    setResult(parseInt(num1) - parseInt(num2));
+    check(인풋숫자1, 인풋숫자2);
+    숫자변경(parseInt(인풋숫자1) - parseInt(인풋숫자2));
   };
 
   const onClickMul = () => {
-    check(num1, num2);
-    setResult(parseInt(num1) * parseInt(num2));
+    check(인풋숫자1, 인풋숫자2);
+    숫자변경(parseInt(인풋숫자1) * parseInt(인풋숫자2));
   };
 
   const onClickDiv = () => {
-    check(num1, num2);
-    setResult(parseInt(parseInt(num1)) / parseInt(parseInt(num2)));
+    check(인풋숫자1, 인풋숫자2);
+    숫자변경(parseInt(parseInt(인풋숫자1)) / parseInt(parseInt(인풋숫자2)));
   };
 
   return (
     <div className="bg-red-100 min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-2xl font-bold mb-4">Awesome한 계산기</h1>
-      <div className="text-3xl font-black mb-4">{result}</div>
+      <div className="text-3xl font-black mb-4">{숫자}</div>
       <div>
         <input
           class="border-2 focus:outline-none focus:border-purple-400 rounded-lg px-4 py-2 text-xl"
           type="number"
-          value={num1}
+          value={인풋숫자1}
           onChange={onChangeNum1}
         />
         <input
           class="border-2 focus:outline-none focus:border-purple-400 rounded-lg px-4 py-2 text-xl ml-4"
           type="text"
-          value={num2}
+          value={인풋숫자2}
           onChange={onChangeNum2}
         />
       </div>
