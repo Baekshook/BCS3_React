@@ -1,9 +1,10 @@
 import PrtuseState from "@components/PrtuseState";
+import Calculator from "@components/Calculator";
 
 function App() {
   return (
     <>
-      <PrtuseState />
+      <Calculator />
     </>
   );
 }
