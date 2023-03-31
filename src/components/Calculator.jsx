@@ -5,13 +5,13 @@ export default function Calculator() {
   const [인풋숫자1, 인풋숫자변경1] = useState();
   const [인풋숫자2, 인풋숫자변경2] = useState();
 
-  const check = (n1, n2) => {
-    if (n1 === "" || n2 === "") {
+  const check = (인풋1, 인풋2) => {
+    if (인풋1 === "" || 인풋2 === "") {
       alert("값을 입력하세요!");
       return;
     }
 
-    if (isNaN(n1) || isNaN(n2)) {
+    if (isNaN(인풋1) || isNaN(인풋2)) {
       alert("숫자를 입력하세요!");
       return;
     }

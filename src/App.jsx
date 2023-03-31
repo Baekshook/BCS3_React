@@ -1,10 +1,18 @@
 import PrtuseState from "@components/PrtuseState";
 import Calculator from "@components/Calculator";
+import Div1 from "@components/Div1";
+import Div2 from "@components/Div2";
+import Div3 from "@components/Div3";
 
 function App() {
   return (
     <>
-      <Calculator />
+      {/* <Calculator /> */}
+      <div className="bg-red-100 min-h-screen flex flex-col justify-center items-center">
+        <Div1 />
+        <Div2 />
+        <Div3 />
+      </div>
     </>
   );
 }
