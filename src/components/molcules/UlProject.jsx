@@ -4,14 +4,14 @@ import projectContents from "../../projectContents.json";
 
 export default function UlProject() {
   return (
-    <ul className="bg-indigo-100 max-w-screen-xl mx-auto grid grid-cols-2 justify-items-center gap-8 py-8">
+    <ul className="bg-indigo-100 max-w-screen-xl mx-auto grid grid-cols-3 justify-items-center gap-8 py-8">
       {projectContents.map((v, i) => {
         return (
           <ProjectName
             key={i}
-            images={v.images}
-            content={v.content}
-            description={v.description}
+            image={v.image}
+            title={v.title}
+            desc={v.desc}
           />
         );
       })}
