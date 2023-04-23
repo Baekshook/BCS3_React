@@ -13,7 +13,11 @@ export default function ProjectName({ title, desc, image, index }) {
   ];
 
   return (
-    <li className="bg-purple-300 w-60 h-72 rounded-xl relative">
+    <li
+      className={`${
+        index > 4 ? "bg-purple-300" : "bg-orange-300"
+      } w-60 h-72 rounded-xl relative`}
+    >
       {/* object-fit: cover */}
       <div className="bg-yellow-100 w-full h-1/2 rounded-t-xl">
         <img
