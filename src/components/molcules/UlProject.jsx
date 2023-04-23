@@ -12,6 +12,7 @@ export default function UlProject() {
             image={v.image}
             title={v.title}
             desc={v.desc}
+            index={i}
           />
         );
       })}
