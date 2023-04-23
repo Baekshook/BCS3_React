@@ -24,7 +24,11 @@ export default function ProjectName({ title, desc, image, index }) {
       </div>
       <div className="text-xl font-bold mt-2 mx-2">{title}</div>
       <div className="mt-2 mx-2">{desc}</div>
-      <Link to={`/Portfolio/${index + 1}`}>
+      <Link
+        to={`/portfolio/${
+          index + 1
+        }?title=${title}&desc=${desc}&image=${image}`}
+      >
         <button
           className={`absolute bottom-0 right-0 m-4 px-4 py-2 rounded-full ${
             colors[index % colors.length]
