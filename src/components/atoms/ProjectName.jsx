@@ -6,7 +6,7 @@ export default function ProjectName({ title, desc, image }) {
       {/* object-fit: cover */}
       <div className="bg-yellow-100 w-full h-1/2 rounded-t-xl">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-xl"
           src={`${process.env.PUBLIC_URL}/${image}`}
           alt="projectImg"
         />
