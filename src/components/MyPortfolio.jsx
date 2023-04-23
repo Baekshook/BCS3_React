@@ -3,6 +3,7 @@ import Header from "@components/organism/Header";
 import Main from "@components/organism/Main";
 import Footer from "@components/organism/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Portfolio from "src/pages/Portfolio";
 
 export default function MyPortfolio() {
   return (
@@ -11,6 +12,7 @@ export default function MyPortfolio() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
         <Footer />
       </div>
