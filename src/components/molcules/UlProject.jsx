@@ -9,12 +9,12 @@ export default function UlProject() {
         return (
           <ProjectName
             key={i}
-            image={v.image}
-            title={v.title}
-            desc={v.desc}
             index={i}
+            title={v.title}
+            image={v.image}
+            desc={v.desc}
           />
-        );
+        ); // map함수로 json 파일 받아오고 PortfolioCard의 props 적용
       })}
     </ul>
   );
