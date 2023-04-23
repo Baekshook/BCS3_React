@@ -8,7 +8,7 @@ import Portfolio from "src/pages/Portfolio";
 export default function MyPortfolio() {
   return (
     <BrowserRouter>
-      <div className="bg-red-100 min-h-screen">
+      <div className="bg-red-100 min-h-screen flex flex-col">
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
